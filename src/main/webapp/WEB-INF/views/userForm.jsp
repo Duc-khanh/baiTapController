@@ -1,0 +1,24 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Khanh Nguyen
+  Date: 4/23/2025
+  Time: 5:55 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>$Title$</title>
+</head>
+<body>
+<h2>Nhập thông tin người dùng</h2>
+<form method="post" action="submitUser" modelAttribute="user">
+    <label>Ho ten</label>
+    <input type="text" name="name" required> <br> <br>
+    <label>Tuoi</label>
+    <input type="number" name="age" required> <br> <br>
+    <input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
