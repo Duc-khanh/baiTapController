@@ -7,11 +7,13 @@
 <body>
 <h2>Danh sách sản phẩm</h2>
 
+<!-- Form tìm kiếm -->
 <form action="/search" method="get">
     <input type="text" name="keyword" placeholder="Nhập từ khóa tìm kiếm" />
     <button type="submit">Tìm kiếm</button>
 </form>
 
+<!-- Hiển thị danh sách sản phẩm -->
 <table border="1" cellpadding="5">
     <tr>
         <th>ID</th>
@@ -25,9 +27,7 @@
             <td>${p.name}</td>
             <td>${p.price}</td>
             <td>
-                <a href="/deleteProduct?id=${p.id}">
-                    Xóa
-
+                <a href="/deleteProduct?id=${p.id}"
                 </a>
             </td>
         </tr>

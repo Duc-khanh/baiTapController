@@ -47,8 +47,8 @@ public class UserController {
         return "/thanks";
     }
 
-    // bai 12
-    @GetMapping("/showFormAdd")
+    // bai 13
+    @GetMapping("/form")
     public String showFormAdd(Model model) {
         model.addAttribute("user", new User());
         return "/showFormAdd";
@@ -58,5 +58,18 @@ public class UserController {
     public String resultForm(@ModelAttribute("user") User user, Model model) {
         model.addAttribute("message", "Thông tin đã nhận thành công");
         return "/resultAdd";
+    }
+    //
+    @GetMapping("/edit")
+    public String showEditForm(Model model) {
+        User user = new User("Nguyen Duc Khanh", 20);
+        model.addAttribute("user", user);
+        return "/editForm";
+    }
+
+    @PostMapping("/edit")
+    public String submitEdit(@ModelAttribute("user") User user, Model model) {
+        model.addAttribute("message", "Thông tin đã được cập nhật!");
+        return "/editResult";
     }
 }
